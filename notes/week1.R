@@ -22,11 +22,11 @@
 ## dget - use on single object, dump uses on multiple objects
 
 # File Connection
-`
+```
 fh1 <- file("foo.txt", "r")
 data <- read.csv(fh1)
 close(fh1)
-`
+```
 
 # File Connection to URL
 uh1 <- url("http://www.jhsph.edu", "r")
