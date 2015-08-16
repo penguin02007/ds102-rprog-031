@@ -21,8 +21,7 @@
 
 ## dget - use on single object, dump uses on multiple objects
 
-## Open a File Connection
-```python
+```Open a File Connection
 fh1 <- file("foo.txt", "r")
 data <- read.csv(fh1)
 close(fh1)
