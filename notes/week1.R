@@ -1,32 +1,32 @@
 # Week 1 Notes
-R Objects
-
-R has five basic or “atomic” classes of objects:
+## R Objects
+## R has five basic or “atomic” classes of objects:
   
-character
-numeric (real numbers)
-integer
-complex
-logical (True/ False)
+## character
+## numeric (real numbers)
+## integer
+## complex
+## logical (True/ False)
 
 
-A vector can only contain objects of the same class.
+## A vector can only contain objects of the same class.
+## A list is represented as a vector but can contain objects of different classes.
 
-A list is represented as a vector but can contain objects of different classes.
+## Any object that contains data is called a data structure and numeric vectors are the simplest type of data structure in R.
+## In fact, even a single number is considered a vector of length one.
 
-Any object that contains data is called a data structure and numeric vectors are the simplest type of data structure in R.
-In fact, even a single number is considered a vector of length one.
+## Textual Data Formats
+## dput - Writes ASCII text representation of an R or
+## pass data around by deparse object and read it back with dget.
 
-Textual Data Formats
-dput - Writes ASCII text representation of an R or
-pass data around by deparse object and read it back with dget.
-
-dget - use on single object, dump uses on multiple objects
+## dget - use on single object, dump uses on multiple objects
 
 # File Connection
+`
 fh1 <- file("foo.txt", "r")
 data <- read.csv(fh1)
 close(fh1)
+`
 
 # File Connection to URL
 uh1 <- url("http://www.jhsph.edu", "r")
