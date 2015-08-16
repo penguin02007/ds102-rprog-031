@@ -21,16 +21,16 @@
 
 ## dget - use on single object, dump uses on multiple objects
 
-## Open a File Connection
-```
+```Open a File Connection
 fh1 <- file("foo.txt", "r")
 data <- read.csv(fh1)
 close(fh1)
 ```
 
-# File Connection to URL
+```File Connection to URL
 uh1 <- url("http://www.jhsph.edu", "r")
 x <- readLines (uh1)
+```
 
 # Subsetting - Vector
 # Single bracket - extract elements of a list of data frame and aways returns an object of the same class
