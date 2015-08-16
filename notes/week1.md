@@ -20,20 +20,20 @@ pass data around by deparse object and read it back with dget.
 
 dget - use on single object, dump uses on multiple objects
 
-# Open a File Connection
+## Open a File Connection
 ```
 fh1 <- file("foo.txt", "r")
 data <- read.csv(fh1)
 close(fh1)
 ```
 
+## File Connection to URL
 ```
-# File Connection to URL
 uh1 <- url("http://www.jhsph.edu", "r")
 x <- readLines (uh1)
 ```
 
-# Subsetting - Vector
+## Subsetting - Vector
 Single bracket - extract elements of a list of data frame and aways returns an object of the same class
 Dollar sign - extract index or element of a list or data frame.
 ```
@@ -41,30 +41,30 @@ x <- c("a","b","c")
 x[x > "a"]  # Subset letter greater than 'a'
 x > "a"   # Logical comparison, return logical vectors 
 ```
-# Subsetting - List
+## Subsetting - List
 ```
 x <- list ( foo = 1:4, bar = 0.6, goo = "ya")
 x[1,3] # Extract $foo and $goo
 x[[1:2]] # Extract multiple elements in $foo
 x$bar # Same as above but use literal names
 ```
-# Subsetting - Matrix
+## Subsetting - Matrix
 x <- matrix(1:6, 2, 3)  # 2r x 3c matrix
 x[1, ]  # Return vecotr with single row
 x[1,2, drop = FALSE] # Preserve dimension of the object
 
-# Partial Matching
+## Partial Matching
 ```
 x <- list ( foo = 1:4, bar = 0.6, goo = "ya")
 x$b # Same as x$bar
 ```
-# Remove NA Values in single element
+## Remove NA Values in single element
 ```
 x <- c("a", 1:2, NA, 3:4)
 x.na <- is.na(x)
 x[!x.na]
 ```
-# Remove NA Values in muliple elements
+## Remove NA Values in muliple elements
 ```
 x <- c(5, 1, 2, NA)
 y <- c(NA, NA, NA, 9)
@@ -74,7 +74,7 @@ good <- complete.cases(x, y)    #Same as na.rm in mean()
 x[good]
 x[good, ][1:6,]   # Remove NAs in the first six rows
 ```
-# Vectorized Matrix Operations
+## Vectorized Matrix Operations
 ```
 x <- matrix(1:4, 2, 2)
 y <- matrix(rep(10,4),2,2)
